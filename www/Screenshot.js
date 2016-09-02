@@ -8,19 +8,6 @@
  */
 var exec = require('cordova/exec'), formats = ['png','jpg'];
 module.exports = {
-	save:function(callback,format,quality, filename) {
-		format = (format || 'png').toLowerCase();
-		filename = filename || 'screenshot_'+Math.round((+(new Date()) + Math.random()));
-		if(formats.indexOf(format) === -1){
-			return callback && callback(new Error('invalid format '+format));
-		}
-		quality = typeof(quality) !== 'number'?100:quality;
-		exec(function(res){
-			callback && callback(null,res);
-		}, function(error){
-			callback && callback(error);
-		}, "Screenshot", "saveScreenshot", [format, quality, filename]);
-	},
 
 	URI:function(callback, quality){
 		quality = typeof(quality) !== 'number'?100:quality;
@@ -31,4 +18,5 @@ module.exports = {
 		}, "Screenshot", "getScreenshotAsURI", [quality]);
 
 	}
+
 };
