@@ -8,6 +8,9 @@
 //
 // Modifications to support orientation change by @ffd8
 //
+// changed 2016-09-02 by Tim Perry to remove save feature -- try to avoid prompting user for access to files
+//                    when all I want is a screenshot of the current app.
+//
 
 #import <Cordova/CDV.h>
 #import "Screenshot.h"
@@ -27,30 +30,6 @@
 	return img;
 }
 
-- (void)saveScreenshot:(CDVInvokedUrlCommand*)command
-{
-	NSString *filename = [command.arguments objectAtIndex:2];
-	NSNumber *quality = [command.arguments objectAtIndex:1];
-
-	NSString *path = [NSString stringWithFormat:@"%@.jpg",filename];
-	NSString *jpgPath = [NSTemporaryDirectory() stringByAppendingPathComponent:path];
-
-	UIImage *image = [self getScreenshot];
-	NSData *imageData = UIImageJPEGRepresentation(image,[quality floatValue]);
-	[imageData writeToFile:jpgPath atomically:NO];
-
-	CDVPluginResult* pluginResult = nil;
-	NSDictionary *jsonObj = [ [NSDictionary alloc]
-		initWithObjectsAndKeys :
-		jpgPath, @"filePath",
-		@"true", @"success",
-		nil
-	];
-
-	pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsDictionary:jsonObj];
-	NSString* callbackId = command.callbackId;
-	[self.commandDelegate sendPluginResult:pluginResult callbackId:callbackId];
-}
 
 - (void) getScreenshotAsURI:(CDVInvokedUrlCommand*)command
 {

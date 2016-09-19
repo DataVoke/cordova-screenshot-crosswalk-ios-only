@@ -5,8 +5,10 @@
  * @author Josemando Sobral
  * @created Jul 2nd, 2012.
  * improved by Hongbo LU
+ * changed 2016-09-02 by Tim Perry to remove save feature -- try to avoid prompting user for access to files
+ *                    when all I want is a screenshot of the current app.
  */
-package com.darktalker.cordova.screenshot;
+package com.sharerevolution.cordova.screenshot;
 
 import android.Manifest;
 import android.content.Intent;

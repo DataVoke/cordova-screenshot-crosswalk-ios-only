@@ -16,7 +16,7 @@
        specific language governing permissions and limitations
        under the License.
 */
-package com.darktalker.cordova.screenshot;
+package com.sharerevolution.cordova.screenshot;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
