@@ -6,12 +6,18 @@ cordova-screenshot
 
 The Screenshot plugin allows your application to take screenshots of the current screen and save them into the phone.
 
+This is a fork of https://github.com/gitawego/cordova-screenshot.git which supports only crosswalk on Android. The goal
+is to allow a screenshot of the crosswalk display without needing to request permissions to the file system or the
+user's images. This works if you want to get screenshot of the app for support purposes.... The image can not be written
+to disk since the permission is not requested...thus may exhibit out of memory issues on devices with very high screen
+resolutions but with not much memory free.
+
 ##how to install
 
 install it via cordova cli
 
 ```
-cordova plugin add https://github.com/gitawego/cordova-screenshot.git
+cordova plugin add https://github.com/perry2of5/cordova-screenshot
 ```
 
 notice:
