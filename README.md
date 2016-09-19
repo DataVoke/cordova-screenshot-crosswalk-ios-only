@@ -1,28 +1,28 @@
 cordova-screenshot
 ==================
 
-[![NPM version](http://img.shields.io/npm/v/com.sharerevolution.cordova.screenshot.svg?style=flat)](https://www.npmjs.com/package/com.sharerevolution.cordova.screenshot)
+[![NPM version](http://img.shields.io/npm/v/com.sharerevolution.cordova.screenshot.svg?style=flat)](https://github.com/perry2of5/cordova-screenshot-crosswalk-ios-only.git)
 
 
 The Screenshot plugin allows your application to take screenshots of the current screen and save them into the phone.
 
-This is a fork of https://github.com/gitawego/cordova-screenshot.git which supports only crosswalk on Android. The goal
-is to allow a screenshot of the crosswalk display without needing to request permissions to the file system or the
-user's images. This works if you want to get screenshot of the app for support purposes.... The image can not be written
-to disk since the permission is not requested...thus may exhibit out of memory issues on devices with very high screen
-resolutions but with not much memory free.
+This is a fork of https://github.com/gitawego/cordova-screenshot.git which supports only crosswalk on Android and the
+default webview on iOS. The goal is to allow a screenshot of the crosswalk display without needing to request
+permissions to the file system or the user's images. This works if you want to get screenshot of the app for support
+purposes.... The image can not be written to disk since the permission is not requested...thus may exhibit out of
+memory issues on devices with very high screen resolutions but with not much memory free.
 
 ##how to install
 
 install it via cordova cli
 
 ```
-cordova plugin add https://github.com/perry2of5/cordova-screenshot
+cordova plugin add https://github.com/perry2of5/cordova-screenshot-crosswalk-ios-only.git
 ```
 
 notice:
-in iOS, only jpg format is supported
-in Android, [Crosswalk](https://crosswalk-project.org/documentation/cordova.html) is supported
+On iOS, only jpg format is supported.
+On Android, only [Crosswalk](https://crosswalk-project.org/documentation/cordova.html) is supported
 
 ##usage
 

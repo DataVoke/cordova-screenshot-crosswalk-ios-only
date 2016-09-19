@@ -1,26 +1,24 @@
 {
-  "name": "com.sharerevolution.cordova.screenshot",
+  "name": "com.sharerevolution.cordova.screenshot.crosswalkandiosonly",
   "version": "0.1.6",
   "description": "screenshot Cordova Plugin for Android (Crosswalk) and iOS, only provides screenshot as URI, not as file.",
   "cordova": {
-    "id": "com.sharerevolution.cordova.screenshot",
+    "id": "com.sharerevolution.cordova.screenshot.crosswalkandiosonly",
     "platforms": [
       "android",
-      "ios",
-      "osx"
+      "ios"
     ]
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/perry2of5/cordova-screenshot.git"
+    "url": "git+https://github.com/perry2of5/cordova-screenshot-crosswalk-ios-only.git"
   },
   "keywords": [
     "cordova",
     "screenshot",
     "ecosystem:cordova",
     "cordova-android",
-    "cordova-ios",
-    "cordova-osx"
+    "cordova-ios"
   ],
   "engines": [
     {
@@ -31,7 +29,7 @@
   "author": "Tim Perry et. al. including Hongbo LU",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/perry2of5/cordova-screenshot/issues"
+    "url": "https://github.com/perry2of5/cordova-screenshot-crosswalk-ios-only/issues"
   },
-  "homepage": "https://github.com/perry2of5/cordova-screenshot#readme"
+  "homepage": "https://github.com/perry2of5/cordova-screenshot-crosswalk-ios-only#readme"
 }
