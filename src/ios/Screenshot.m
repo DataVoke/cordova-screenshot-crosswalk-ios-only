@@ -24,7 +24,9 @@
 	UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
 	CGRect rect = [keyWindow bounds];
 	UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0);
-	[keyWindow drawViewHierarchyInRect:keyWindow.bounds afterScreenUpdates:YES];
+        // avoid slowing down future GPU use by passing afterScreenUpdates:NO 
+        // commit 4e40222 https://github.com/gitawego/cordova-screenshot/pull/100
+	[keyWindow drawViewHierarchyInRect:keyWindow.bounds afterScreenUpdates:NO];
 	UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
 	UIGraphicsEndImageContext();
 	return img;
